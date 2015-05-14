@@ -8,8 +8,6 @@ HISTIGNORE="exit"
 
 PROMPT_COMMAND="history -a"
 
-printf -v RAQUO '\xC2\xBB'
-
-PS1="$RAQUO \w\n\u \$ "
+PS1="\[$(tput bold)\]\w\[$(tput sgr0)\]\n\u \$ "
 
 export EDITOR="nano"
