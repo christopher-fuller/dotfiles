@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ "true" = "$(git rev-parse --is-inside-work-tree)" ]; then
+  git fetch
+  git branch
+  git stash list
+  git status
+fi

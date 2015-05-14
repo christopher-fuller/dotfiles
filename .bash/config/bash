@@ -1,0 +1,15 @@
+shopt -s checkwinsize
+shopt -s histappend
+
+HISTSIZE=10000
+HISTFILESIZE=100000
+HISTCONTROL="ignoreboth"
+HISTIGNORE="exit"
+
+PROMPT_COMMAND="history -a"
+
+printf -v RAQUO '\xC2\xBB'
+
+PS1="$RAQUO \w\n\u \$ "
+
+export EDITOR="nano"

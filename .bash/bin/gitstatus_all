@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+REPOS_PATH="$HOME/path/to/projects"
+
+REPOS=()
+REPOS+=("project1")
+REPOS+=("project2")
+
+for REPO in "${REPOS[@]}"; do
+  if [ -d "$REPOS_PATH/$REPO" ]; then
+    cd "$REPOS_PATH/$REPO"
+    echo -e "\n$REPO:"
+    git fetch &> /dev/null
+    git branch
+    git stash list
+    git status
+  fi
+done
+
+unset -v REPOS_PATH REPOS REPO

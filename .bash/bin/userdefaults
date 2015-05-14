@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool YES
+defaults write -g NSDisableAutomaticTermination -bool YES

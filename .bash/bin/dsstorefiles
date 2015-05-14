@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+find /Applications $HOME -type f -name .DS_Store ! -path $HOME/Desktop/.DS_Store -exec rm -v {} \;

@@ -1,0 +1,8 @@
+[user]
+	name = Christopher Fuller
+	email = git@chrisfuller.me
+[core]
+	excludesfile = ~/.gitignore
+	quotepath = false
+[push]
+	default = upstream
